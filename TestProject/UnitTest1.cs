@@ -135,7 +135,7 @@ namespace TestProject
             object obj = MoodAnalyserFactory.CreateMoodAnalyserUsingParametrisedConstructor("MoodAnalyse", "MoodAnalyse", "I a in Happy mood");
             expected.Equals(obj);
         }
-         */
+         
         //UC5_TC_5.1 problem test
         public void TestMethod1()
         {
@@ -146,6 +146,21 @@ namespace TestProject
 
             expected.Equals(obj);
         }
+        */
+        public void TestMethod1()
+        {
+            //5.2 problem
+            string expected = "Class Not Found";
+            try
+            {
+                object obj = MoodAnalyserFactory.CreateMoodAnalyserUsingParametrisedConstructor("MoodAnalyse", "MoodAnalyse", "Iam in sad Mood");
+            }
+            catch (MoodAnalyserCustomException exception)
+            {
+                Assert.AreEqual(expected, exception.Message);
+            }
+        }
+
     }
 
 }
