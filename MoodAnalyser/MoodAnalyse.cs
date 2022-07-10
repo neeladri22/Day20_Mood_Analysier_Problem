@@ -31,12 +31,11 @@ namespace MoodAnalyser
                     return "HAPPY";
                 }
             }
-            catch(NullReferenceException e)
+            catch
             {
-                Console.WriteLine("getting Null pointer exception ");
-                return message;
+                Console.WriteLine("HAPPY");
+                return "HAPPY";
             }
-
         }
     }
 }
