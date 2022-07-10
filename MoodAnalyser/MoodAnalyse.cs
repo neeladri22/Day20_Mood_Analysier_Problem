@@ -16,26 +16,53 @@ namespace MoodAnalyser
             this.message = message;
         }
         //Creating method for Analyzing mood
+        /*
+         public string AnalyseMood()
+         {
+             try
+             {
+                 if (this.message.Contains("sad"))
+                 {
+                     Console.WriteLine("SAD");
+                     return "SAD";
+                 }
+                 else
+                 {
+                     Console.WriteLine("HAPPY");
+                     return "HAPPY";
+                 }
+             }
+             catch
+             {
+                 Console.WriteLine("HAPPY");
+                 return "HAPPY";
+             }
+         }
+        */
+        //Creating method for handling the exception
         public string AnalyseMood()
         {
             try
             {
-                if (this.message.Contains("sad"))
+                if (this.message.Equals(string.Empty))
                 {
-                    Console.WriteLine("SAD");
+                    throw new MoodAnalyserCustomException(MoodAnalyserCustomException.ExceptionType.EMPTY_MESSAGE, "Mood Should not be Empty");
+                }
+                if (this.message.Contains("Sad"))
+                {
                     return "SAD";
                 }
                 else
                 {
-                    Console.WriteLine("HAPPY");
                     return "HAPPY";
                 }
             }
-            catch
+            catch (NullReferenceException)
             {
-                Console.WriteLine("HAPPY");
-                return "HAPPY";
+                throw new MoodAnalyserCustomException(MoodAnalyserCustomException.ExceptionType.NULL_MESSAGE, "Mood Should Not be Null");
+
             }
         }
+
     }
 }
