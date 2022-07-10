@@ -160,7 +160,7 @@ namespace TestProject
                 Assert.AreEqual(expected, exception.Message);
             }
         }
-         */
+       
         public void TestMethod1()
         {
             //5.3 problem
@@ -174,6 +174,24 @@ namespace TestProject
                 Assert.AreEqual(expected, exception.Message);
             }
         }
+          */
+        public void TestMethod1()
+        {
+         
+            // UC6 - reflection invoking the method AnalyseMood
+
+            //Act
+            string expected = "SAD";
+            string message = "Iam in Sad Mood";
+            MoodAnalyse moodAnalyse = new MoodAnalyse(message);
+
+            //Arrange
+            string mood = moodAnalyse.AnalyseMood();
+
+            //Assert
+            Assert.AreEqual(expected, mood);
+        }
+
 
 
     }
