@@ -28,6 +28,8 @@ namespace TestProject
             Assert.AreEqual(expected, mood);
         }
         */
+
+        // Added UC2 problem
         public void TestMethod1()
         {
             //Act
