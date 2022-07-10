@@ -88,7 +88,7 @@ namespace TestProject
             }
 
         }
-        */
+        
 
         // UC4 problem
         //Testing for Reflection - MoodAnalyser Class Name Should Return MoodAnalyser Object
@@ -99,6 +99,22 @@ namespace TestProject
             object obj = MoodAnalyserFactory.CreateMoodAnalyser("MoodAnalyse", "MoodAnalyse");
             expected.Equals(obj);
         }
+        */
+        //UC4_TC4.2
+        public void TestMethod1()
+        {
+            string expected = "Class Not Found";
+            try
+            {
+                object obj = MoodAnalyserFactory.CreateMoodAnalyser("MoodAnalyse", "MoodAnalyse");
+            }
+            catch (MoodAnalyserCustomException exception)
+            {
+                Assert.AreEqual(expected, exception.Message);
+            }
+        }
+
+
     }
 
 }
