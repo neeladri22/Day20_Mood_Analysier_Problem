@@ -83,7 +83,7 @@ namespace MoodAnalyser
                 FieldInfo fieldInfo = type.GetField(fieldName, BindingFlags.Public | BindingFlags.Instance);
                 if (message == null)
                 {
-                    throw new MoodAnalyserCustomException(MoodAnalyserCustomException.ExceptionType.NO_SUCH_FIELD, "Message should not be null");
+                    throw new MoodAnalyserCustomException(MoodAnalyserCustomException.ExceptionType.NULL_MESSAGE, "Message should not be null");
                 }
                 fieldInfo.SetValue(moodAnalyse, message);
                 return moodAnalyse.message;
