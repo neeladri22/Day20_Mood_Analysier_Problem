@@ -17,6 +17,8 @@ namespace MoodAnalyser
             // MoodAnalyse moodAnalyse = new MoodAnalyse(message);
             // moodAnalyse.AnalyseMood();
 
+
+            // Reflection - MoodAnalyser Class Name Should Return MoodAnalyser Object
             MoodAnalyserFactory moodAnalyserFactory = new MoodAnalyserFactory();
             MoodAnalyserFactory.CreateMoodAnalyser("MoodAnalyse", "MoodAnalyse");
 

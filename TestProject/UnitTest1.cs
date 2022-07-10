@@ -91,7 +91,7 @@ namespace TestProject
         */
 
         // UC4 problem
-        //Testing for Reflection 
+        //Testing for Reflection - MoodAnalyser Class Name Should Return MoodAnalyser Object
         public void TestMethod1()
         {
             string message = null;
