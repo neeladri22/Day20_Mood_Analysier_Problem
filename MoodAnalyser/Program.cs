@@ -36,8 +36,10 @@ namespace MoodAnalyser
             //MoodAnalyserFactory.InvokeAnalyseMood("Happy", "AnalyseMood");
 
             //Use Reflection to Invoke mood - Throw exception when pasing improper method name
-            MoodAnalyserFactory.InvokeAnalyseMood("Happy", "AnalyserMood");
+            // MoodAnalyserFactory.InvokeAnalyseMood("Happy", "AnalyserMood");
 
+            //Use Reflection to Invoke mood - Throw exception when pasing improper null method name
+            MoodAnalyserFactory.InvokeAnalyseMood(null, "AnalyseMood");
 
         }
     }
