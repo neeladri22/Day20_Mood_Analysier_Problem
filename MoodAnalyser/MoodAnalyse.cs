@@ -10,6 +10,10 @@ namespace MoodAnalyser
     {
         public string message;
 
+        public MoodAnalyse()
+        {
+        }
+
         //constructor 
         public MoodAnalyse(string message)
         {

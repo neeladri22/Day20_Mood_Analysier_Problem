@@ -39,7 +39,10 @@ namespace MoodAnalyser
             // MoodAnalyserFactory.InvokeAnalyseMood("Happy", "AnalyserMood");
 
             //Use Reflection to Invoke mood - Throw exception when pasing improper null method name
-            MoodAnalyserFactory.InvokeAnalyseMood(null, "AnalyseMood");
+           // MoodAnalyserFactory.InvokeAnalyseMood(null, "AnalyseMood");
+
+            //Use Reflection to change mood dynamically
+            MoodAnalyserFactory.SetField("Happy", "message");
 
         }
     }
