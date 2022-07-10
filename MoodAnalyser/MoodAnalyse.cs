@@ -18,16 +18,25 @@ namespace MoodAnalyser
         //Creating method for Analyzing mood
         public string AnalyseMood()
         {
-            if (this.message.Contains("sad"))
+            try
             {
-                Console.WriteLine("SAD");
-                return "SAD";
+                if (this.message.Contains("sad"))
+                {
+                    Console.WriteLine("SAD");
+                    return "SAD";
+                }
+                else
+                {
+                    Console.WriteLine("HAPPY");
+                    return "HAPPY";
+                }
             }
-            else
+            catch(NullReferenceException e)
             {
-                Console.WriteLine("HAPPY");
-                return "HAPPY";
+                Console.WriteLine("getting Null pointer exception ");
+                return message;
             }
+
         }
     }
 }
