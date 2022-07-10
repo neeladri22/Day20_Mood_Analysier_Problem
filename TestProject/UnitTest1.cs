@@ -208,7 +208,7 @@ namespace TestProject
             //Assert
             Assert.AreEqual(expected, mood);
         }
-        */
+        
         public void TestMethod1()
         {
 
@@ -225,7 +225,32 @@ namespace TestProject
                 Assert.AreEqual(expected, ex.Message);
             }
         }
+        
+        public void TestMethod1()
+        {
 
+            // TC 6.3 - Reflection invoking the method -Throw exception when passing improper null method name
+
+            //Act
+            string expected = "Mood Should Not be Null";
+
+            try
+            {
+                object obj = MoodAnalyserFactory.InvokeAnalyseMood(null, "AnalyseMood");
+            }
+            catch (MoodAnalyserCustomException ex)
+            {
+                Assert.AreEqual(expected, ex.Message);
+            }
+        }
+        */
+        public void TestMethod1()
+        {
+            //TC 7.1 - Set Happy message with refglector should return HAPPY
+
+            string result = MoodAnalyserFactory.SetField("HAPPY", "message");
+            Assert.AreEqual("HAPPY", result);
+        }
 
     }
 
