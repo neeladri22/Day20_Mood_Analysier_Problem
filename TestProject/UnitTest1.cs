@@ -45,13 +45,15 @@ namespace TestProject
             Assert.AreEqual(expected, mood);
         }
         */
+
+        //UC3 Program
         // Testing for throwing exception for Empty message 
         public void TestMethod1()
         {
             try
             {
                 //Act
-                string message = " ";
+                string message = null;
                 MoodAnalyse moodAnalyse = new MoodAnalyse(message);
 
                 //Arrange
