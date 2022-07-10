@@ -39,7 +39,7 @@ namespace MoodAnalyser
              }
          }
         */
-        //Creating method for handling  exception
+        //Creating method for handling the exception
         public string AnalyseMood()
         {
             try
@@ -50,10 +50,12 @@ namespace MoodAnalyser
                 }
                 if (this.message.Contains("Sad"))
                 {
+                    Console.WriteLine("SAD");
                     return "SAD";
                 }
                 else
                 {
+                    Console.WriteLine("HAPPY");
                     return "HAPPY";
                 }
             }
