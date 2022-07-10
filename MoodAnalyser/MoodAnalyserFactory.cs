@@ -19,7 +19,7 @@ namespace MoodAnalyser
                 try
                 {
                     Assembly executing = Assembly.GetExecutingAssembly();
-                    Type moodAnalyseType = executing.GetType("MoodAnalyse." + className);
+                    Type moodAnalyseType = executing.GetType("MoodAnalyser." + className);
                     Console.WriteLine("Mood Analyser Type is : " + moodAnalyseType);
                     return Activator.CreateInstance(moodAnalyseType);
                 }
@@ -31,7 +31,7 @@ namespace MoodAnalyser
             }
             else
             {
-                throw new MoodAnalyserCustomException(MoodAnalyserCustomException.ExceptionType.NO_SUCH_METHOD, "Constructor is Not Found" + constructorName);
+                throw new MoodAnalyserCustomException(MoodAnalyserCustomException.ExceptionType.NO_SUCH_METHOD, "Constructor is Not Found");
             }
 
         }
@@ -57,5 +57,6 @@ namespace MoodAnalyser
             }
 
         }
+
     }
 }

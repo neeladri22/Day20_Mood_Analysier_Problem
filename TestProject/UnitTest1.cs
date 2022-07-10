@@ -99,7 +99,7 @@ namespace TestProject
             object obj = MoodAnalyserFactory.CreateMoodAnalyser("MoodAnalyse", "MoodAnalyse");
             expected.Equals(obj);
         }
-        */
+        
         //UC4_TC4.2
         public void TestMethod1()
         {
@@ -107,6 +107,20 @@ namespace TestProject
             try
             {
                 object obj = MoodAnalyserFactory.CreateMoodAnalyser("MoodAnalyse", "MoodAnalyse");
+            }
+            catch (MoodAnalyserCustomException exception)
+            {
+                Assert.AreEqual(expected, exception.Message);
+            }
+        }
+         */
+        //UC4_TC4.3
+        public void TestMethod1()
+        {
+            string expected = "Constructor is Not Found";
+            try
+            {
+                object obj = MoodAnalyserFactory.CreateMoodAnalyser("MoodAnalyse", "Demo");
             }
             catch (MoodAnalyserCustomException exception)
             {
