@@ -243,13 +243,28 @@ namespace TestProject
                 Assert.AreEqual(expected, ex.Message);
             }
         }
-        */
+       
         public void TestMethod1()
         {
             //TC 7.1 - Set Happy message with refglector should return HAPPY
 
             string result = MoodAnalyserFactory.SetField("HAPPY", "message");
             Assert.AreEqual("HAPPY", result);
+        }
+
+         */
+        public void TestMethod1()
+        {
+            //TC 7.2 - Improper Should Throw Exception with No Such Field
+            string expected = "Field is not Found";
+            try
+            {
+                object obj = MoodAnalyserFactory.SetField("Happy", "Demo");
+            }
+            catch (MoodAnalyserCustomException e)
+            {
+                Assert.AreEqual(expected, e.Message);
+            }
         }
 
     }
