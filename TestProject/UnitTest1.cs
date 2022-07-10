@@ -255,11 +255,12 @@ namespace TestProject
          */
         public void TestMethod1()
         {
-            //TC 7.2 - Improper Should Throw Exception with No Such Field
-            string expected = "Field is not Found";
+            //TC 7.3 - Throw exception while passing Null value
+
+            string expected = "Message should not be null";
             try
             {
-                object obj = MoodAnalyserFactory.SetField("Happy", "Demo");
+                object obj = MoodAnalyserFactory.SetField(null, "message");
             }
             catch (MoodAnalyserCustomException e)
             {
