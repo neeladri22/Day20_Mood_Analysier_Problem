@@ -18,10 +18,12 @@ namespace MoodAnalyser
         {
             if (this.message.Contains("sad"))
             {
+                Console.WriteLine("SAD");
                 return "SAD";
             }
             else
             {
+                Console.WriteLine("HAPPY");
                 return "HAPPY";
             }
         }
