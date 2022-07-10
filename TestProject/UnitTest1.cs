@@ -127,12 +127,23 @@ namespace TestProject
                 Assert.AreEqual(expected, exception.Message);
             }
         }
-        */
+       
         //UC5 problem test
         public void TestMethod1()
         {
             object expected = new MoodAnalyse("I a in Happy mood");
             object obj = MoodAnalyserFactory.CreateMoodAnalyserUsingParametrisedConstructor("MoodAnalyse", "MoodAnalyse", "I a in Happy mood");
+            expected.Equals(obj);
+        }
+         */
+        //UC5_TC_5.1 problem test
+        public void TestMethod1()
+        {
+           
+             object expected = new MoodAnalyse("I a in sad mood");
+
+            object obj = MoodAnalyserFactory.CreateMoodAnalyserUsingParametrisedConstructor("MoodAnalyse", "MoodAnalyse", "I a in sad mood");
+
             expected.Equals(obj);
         }
     }
