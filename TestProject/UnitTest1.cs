@@ -44,10 +44,10 @@ namespace TestProject
             //Assert
             Assert.AreEqual(expected, mood);
         }
-        */
+        
 
         //UC3 Program
-        // Testing for throwing exception for Empty message 
+        // Testing for throwing exception for null message 
         public void TestMethod1()
         {
             try
@@ -67,7 +67,27 @@ namespace TestProject
             }
 
         }
+        */
+        // Testing for throwing exception for null message 
+        public void TestMethod1()
+        {
+            try
+            {
+                //Act
+                string message = "";
+                MoodAnalyse moodAnalyse = new MoodAnalyse(message);
 
+                //Arrange
+                string mood = moodAnalyse.AnalyseMood();
+            }
+            catch (MoodAnalyserCustomException ex)
+            {
+                string expected = "Mood Should not be Empty";
+                //Assert
+                Assert.AreEqual(expected, ex.Message);
+            }
+
+        }
 
     }
 
