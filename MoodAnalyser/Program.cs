@@ -13,7 +13,7 @@ namespace MoodAnalyser
            // MoodAnalyse moodAnalyse = new MoodAnalyse(message);
            // moodAnalyse.AnalyseMood();
 
-            string message = null;
+            string message = "";
             MoodAnalyse moodAnalyse = new MoodAnalyse(message);
             moodAnalyse.AnalyseMood();
 
