@@ -174,7 +174,7 @@ namespace TestProject
                 Assert.AreEqual(expected, exception.Message);
             }
         }
-          */
+         
         public void TestMethod1()
         {
          
@@ -191,7 +191,23 @@ namespace TestProject
             //Assert
             Assert.AreEqual(expected, mood);
         }
+         */
+        public void TestMethod1()
+        {
 
+            //TC 6.1 -  reflection invoking the method AnalyseMood by passing message Happy
+
+            //Act
+            string expected = "HAPPY";
+            string message = "Happy";
+            MoodAnalyse moodAnalyse = new MoodAnalyse(message);
+
+            //Arrange
+            string mood = moodAnalyse.AnalyseMood();
+
+            //Assert
+            Assert.AreEqual(expected, mood);
+        }
 
 
     }

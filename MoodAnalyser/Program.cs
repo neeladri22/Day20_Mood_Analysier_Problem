@@ -30,7 +30,9 @@ namespace MoodAnalyser
             // MoodAnalyserFactory.CreateMoodAnalyserUsingParametrisedConstructor("MoodAnalyse", "Demo", "I am in Happy mood");
 
             //Reflection to Invoke mood - AnalyseMood
-            MoodAnalyserFactory.InvokeAnalyseMood("Iam in Sad Mood", "AnalyseMood");
+            // MoodAnalyserFactory.InvokeAnalyseMood("Iam in Sad Mood", "AnalyseMood");
+            //Use Reflection to Invoke mood - AnalyseMood by passing messgae Happy
+            MoodAnalyserFactory.InvokeAnalyseMood("Happy", "AnalyseMood");
 
 
         }
