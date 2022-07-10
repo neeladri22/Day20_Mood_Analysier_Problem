@@ -27,7 +27,7 @@ namespace TestProject
             //Assert
             Assert.AreEqual(expected, mood);
         }
-        */
+        
 
         // Added UC2 problem
         public void TestMethod1()
@@ -44,6 +44,29 @@ namespace TestProject
             //Assert
             Assert.AreEqual(expected, mood);
         }
+        */
+        // Testing for throwing exception for Empty message 
+        public void TestMethod1()
+        {
+            try
+            {
+                //Act
+                string message = " ";
+                MoodAnalyse moodAnalyse = new MoodAnalyse(message);
+
+                //Arrange
+                string mood = moodAnalyse.AnalyseMood();
+            }
+            catch (MoodAnalyserCustomException ex)
+            {
+                string expected = "Mood Should not be Empty";
+                //Assert
+                Assert.AreEqual(expected, ex.Message);
+            }
+
+        }
+
+
     }
 
 }
