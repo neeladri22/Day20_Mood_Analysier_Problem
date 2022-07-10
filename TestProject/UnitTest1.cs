@@ -67,7 +67,7 @@ namespace TestProject
             }
 
         }
-        */
+        
         // Testing for throwing exception for null message 
         public void TestMethod1()
         {
@@ -88,7 +88,17 @@ namespace TestProject
             }
 
         }
+        */
 
+        // UC4 problem
+        //Testing for Reflection 
+        public void TestMethod1()
+        {
+            string message = null;
+            object expected = new MoodAnalyse(message);
+            object obj = MoodAnalyserFactory.CreateMoodAnalyser("MoodAnalyse", "MoodAnalyse");
+            expected.Equals(obj);
+        }
     }
 
 }
