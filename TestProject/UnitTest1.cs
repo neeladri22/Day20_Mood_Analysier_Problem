@@ -146,7 +146,7 @@ namespace TestProject
 
             expected.Equals(obj);
         }
-        */
+       
         public void TestMethod1()
         {
             //5.2 problem
@@ -160,6 +160,21 @@ namespace TestProject
                 Assert.AreEqual(expected, exception.Message);
             }
         }
+         */
+        public void TestMethod1()
+        {
+            //5.3 problem
+            string expected = "Constructor is not found";
+            try
+            {
+                object obj = MoodAnalyserFactory.CreateMoodAnalyserUsingParametrisedConstructor("MoodAnalyse", "Demo", "Iam in sad Mood");
+            }
+            catch (MoodAnalyserCustomException exception)
+            {
+                Assert.AreEqual(expected, exception.Message);
+            }
+        }
+
 
     }
 
