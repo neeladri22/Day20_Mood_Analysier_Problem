@@ -39,7 +39,7 @@ namespace MoodAnalyser
              }
          }
         */
-        //Creating method for handling the exception
+        //Creating method for handling  exception
         public string AnalyseMood()
         {
             try
