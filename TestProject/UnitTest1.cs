@@ -191,7 +191,7 @@ namespace TestProject
             //Assert
             Assert.AreEqual(expected, mood);
         }
-         */
+         
         public void TestMethod1()
         {
 
@@ -207,6 +207,23 @@ namespace TestProject
 
             //Assert
             Assert.AreEqual(expected, mood);
+        }
+        */
+        public void TestMethod1()
+        {
+
+           // TC 6.2 - Reflection invoking the method -Throw exception when passing improper method name
+
+            //Act
+            string expected = "Method is not Found";
+            try
+            {
+                object obj = MoodAnalyserFactory.InvokeAnalyseMood("Happy", "AnalyserMood");
+            }
+            catch (MoodAnalyserCustomException ex)
+            {
+                Assert.AreEqual(expected, ex.Message);
+            }
         }
 
 
