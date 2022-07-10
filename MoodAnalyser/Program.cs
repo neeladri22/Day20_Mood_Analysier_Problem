@@ -21,7 +21,11 @@ namespace MoodAnalyser
             // Reflection - MoodAnalyser Class Name Should Return MoodAnalyser Object
             MoodAnalyserFactory moodAnalyserFactory = new MoodAnalyserFactory();
             //Improper Constructor throw exception
-            MoodAnalyserFactory.CreateMoodAnalyser("MoodAnalyse", "Demo");
+            // MoodAnalyserFactory.CreateMoodAnalyser("MoodAnalyse", "Demo");
+
+            // paramerized constructor
+            MoodAnalyserFactory.CreateMoodAnalyserUsingParametrisedConstructor("MoodAnalyse", "MoodAnalyse", "I am in sad mood");
+
         }
     }
 }
